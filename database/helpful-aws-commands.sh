@@ -3,7 +3,7 @@
 ### commit
 git config --global user.email "you@example.com" && git config --global user.name "Your Name"
 ### Generate EC2 Key pair
-aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > MyKeyPair.pem && chmod 0600 MyKeyPair.pem
+aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > $HOME/MyKeyPair.pem && chmod 0600 $HOME/MyKeyPair.pem
 
 alias acf='aws cloudformation'
 acf validate-template --template-body file://vpc.yaml
